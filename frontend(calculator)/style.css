@@ -1,0 +1,60 @@
+body {
+    background: #ffd6e8; /* پاستلی صورتی */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: sans-serif;
+}
+
+.calculator {
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(15px);
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    width: 300px;
+}
+
+#display {
+    width: 100%;
+    height: 60px;
+    font-size: 26px;
+    margin-bottom: 20px;
+    text-align: right;
+    padding: 10px;
+    border-radius: 12px;
+    border: none;
+    background: rgba(255,255,255,0.4);
+    backdrop-filter: blur(10px);
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+button {
+    height: 60px;
+    font-size: 20px;
+    border: none;
+    border-radius: 15px;
+    background: rgba(255,255,255,0.35);
+    backdrop-filter: blur(10px);
+    cursor: pointer;
+    transition: transform 0.1s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+    /* انیمیشن فشار */
+    button:active {
+        transform: scale(0.92);
+        box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+    }
+
+.clear {
+    grid-column: span 4;
+    background: rgba(255, 120, 120, 0.4);
+    color: white;
+}
